@@ -1,4 +1,4 @@
-public class Dog extends Animals implements AnimalActionable {
+public class Dog extends Animal {
 
     public Dog(String name) {
         super(name);
@@ -10,19 +10,14 @@ public class Dog extends Animals implements AnimalActionable {
         super("Бобік");
     }
 
-    @Override
-    public void Run(int distance) {
-        if (distance > maxRunDist) {
-            distance = maxRunDist;
-        }
+
+    public void run(int distance) {
+        distance = clipFunc(maxRunDist, distance);
         System.out.printf("Собака %s пробіг %s метрів%n", this.name, distance);
     }
 
-    @Override
-    public void Swim(int distance) {
-        if (distance > maxSwimDist) {
-            distance = maxSwimDist;
-        }
+    public void swim(int distance) {
+        distance = clipFunc(maxSwimDist, distance);
         System.out.printf("Собака %s проплив %s метрів%n", this.name, distance);
     }
 }

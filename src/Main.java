@@ -3,19 +3,19 @@ public class Main {
         Cat cat = new Cat();
         Dog dog = new Dog();
 
-        cat.Run(24);
-        cat.Swim(939);
+        cat.run(24);
+        cat.swim(939);
 
-        dog.Run(888);
-        dog.Swim(1024);
+        dog.run(888);
+        dog.swim(1024);
 
         cat = new Cat("Stepan");
         dog = new Dog("Patron");
 
-        cat.Run(24);
-        cat.Swim(939);
+        cat.run(24);
+        cat.swim(939);
 
-        dog.Run(888);
-        dog.Swim(1024);
+        dog.run(888);
+        dog.swim(1024);
     }
 }
